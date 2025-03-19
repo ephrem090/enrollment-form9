@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment Form</title>
+    <style>
+        /* Styling here remains unchanged */
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background-image: url('https://cdn.vectorstock.com/i/500p/82/14/green-background-vector-15738214.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        h1 {
+           font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            color: Black;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #ff6347, #ff1493);
+            webkit-background-clip: text;
+            background-clip: text;
+            letter-spacing: 3px;
+            animation: glow 1.5s ease-in-out infinite alternate;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin-top: 20px;
+        }
+
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            text-align: center;
+            background-color: black;
+            padding: 15px;
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-container input[type="file"] {
+            padding: 5px;
+        }
+
+        /* Centering the logo */
+        .home-container img {
+            display: block;
+            margin: 0 auto;
+            height: 10%;
+            width: auto;
+        }
+
+        /* Success message styles */
+        .success-message {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="home-container">
+        <!-- Updated the logo to be centered -->
+        <img src="C:\Users\ephrem cubita\Downloads\d3ab0c78-b3fc-45cf-944a-50dec7fb9ce1-removebg-preview (1).png" class="image-btn" style="height: 10%; width: 10% align="center";>
+        <h1>Virginia Ramirez Cruz National High School</h1>
+        <h1>Siling Bata, Pandi, Bulacan</h1>
+        <h1>WELCOME TO OUR ONLINE ENROLLMENT FORM</h1>
+        <a href="javascript:void(0);" class="button" id="register-btn">REGISTER</a>
+    </div>
+
+    <div class="form-container" id="form-container" style="display: none;">
+        <h1>Enrollment Form</h1>
+        <form id="enrollment-form">
+            <!-- Form Fields (All the inputs for student data) -->
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" required>
+
+            <label for="lrn">LRN:</label>
+            <input type="text" id="lrn" required>
+
+            <label for="street">Street:</label>
+            <input type="text" id="street" required>
+
+            <label for="barangay">Barangay:</label>
+            <input type="text" id="barangay" required>
+
+            <label for="municipality">Municipality/City:</label>
+            <input type="text" id="municipality" required>
+
+            <label for="province">Province:</label>
+            <input type="text" id="province" required>
+
+            <label for="guardianName">Guardian Name:</label>
+            <input type="text" id="guardianName" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="parentPhone">Parent's Phone Number:</label>
+            <input type="tel" id="parentPhone" required>
+
+            <label for="gradeLevel">Grade Level:</label>
+            <input type="text" id="gradeLevel" required>
+
+            <label for="strand">Select Strand:</label>
+            <select id="strand" required>
+                <option value="stem">STEM (Science, Technology, Engineering, Mathematics)</option>
+                <option value="abm">ABM (Accountancy, Business, and Management)</option>
+                <option value="humss">HUMSS (Humanities and Social Sciences)</option>
+                <option value="gas">GAS (General Academic Strand)</option>
+                <option value="tvl">TVL (Technical-Vocational-Livelihood)</option>
+                <option value="ict">ICT (Information and Communication Technology)</option>
+                <option value="he">HE (Home Economics)</option>
+            </select>
+
+            <!-- File Upload for Grade Card -->
+            <label for="gradeCard">Upload Grade Card:</label>
+            <input type="file" id="gradeCard" required>
+
+            <!-- File Upload for Birth Certificate -->
+            <label for="birthCertificate">Upload Birth Certificate:</label>
+            <input type="file" id="birthCertificate" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Success message -->
+    <div class="success-message" id="success-message">
+        <h2>Submit Successful!</h2>
+    </div>
+
+    <script>
+       document.getElementById('register-btn').addEventListener('click', function () {
+    document.getElementById('form-container').style.display = 'block';
+});
+
+document.getElementById('enrollment-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const formData = {
+        fullname: document.getElementById('fullname').value,
+        dob: document.getElementById('dob').value,
+        age: document.getElementById('age').value,
+        lrn: document.getElementById('lrn').value,
+        street: document.getElementById('street').value,
+        barangay: document.getElementById('barangay').value,
+        municipality: document.getElementById('municipality').value,
+        province: document.getElementById('province').value,
+        guardianName: document.getElementById('guardianName').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        parentPhone: document.getElementById('parentPhone').value,
+        gradeLevel: document.getElementById('gradeLevel').value,
+        strand: document.getElementById('strand').value,
+        gradeCard: document.getElementById('gradeCard').files[0] ? document.getElementById('gradeCard').files[0].name : '',
+        birthCertificate: document.getElementById('birthCertificate').files[0] ? document.getElementById('birthCertificate').files[0].name : ''
+    };
+
+    console.log("Form Data:", formData); // Debugging line to check form data in the console
+
+    // Save the data to localStorage under the selected strand category
+    const strandKey = formData.strand.toLowerCase();
+    let existingData = JSON.parse(localStorage.getItem(strandKey)) || [];
+    existingData.push(formData);
+
+    localStorage.setItem(strandKey, JSON.stringify(existingData));
+
+    // Show success message and hide form
+    document.getElementById('success-message').style.display = 'block';
+    document.getElementById('form-container').style.display = 'none';
+
+    // Hide the success message after 3 seconds
+    setTimeout(function () {
+        document.getElementById('success-message').style.display = 'none';
+    }, 3000);
+});
+
+    </script>
+
+</body>
+
+</html>

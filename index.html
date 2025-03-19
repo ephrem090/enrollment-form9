@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Enrollment Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://cdn.vectorstock.com/i/500p/82/14/green-background-vector-15738214.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            color: Black;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #ff6347, #ff1493);
+            webkit-background-clip: text;
+            background-clip: text;
+            letter-spacing: 3px;
+            animation: glow 1.5s ease-in-out infinite alternate;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 300;
+            text-align: center;
+            color: Black;
+            letter-spacing: 1px;
+            margin-top: 20px;
+        }
+
+        /* Styled Button */
+        .button {
+            display: block;
+            width: 250px;
+            margin: 30px auto;
+            text-align: center;
+            background-color: #28a745;  /* Green background */
+            padding: 15px;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for better effect */
+			animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        .button:hover {
+            background-color: #218838; /* Darker green */
+            transform: translateY(-3px); /* Hover effect that moves the button slightly up */
+			transition: background 0.3s ease;
+			animation: glow 1.5s ease-in-out infinite alternate;
+        }
+        }
+
+        .button:active {
+            transform: translateY(1px); /* Slightly press down effect when clicked */
+			  animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.5);
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 50px rgba(255, 255, 255, 1);
+            }
+        }
+
+        .home-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+			animation: glow 1.5s ease-in-out infinite alternate;
+        }
+		
+		    .next-button {
+        background-color: Black; /* Green background */
+        color: white;
+        font-size: 18px;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        display: block;
+        margin: 20px auto; /* Centers the button */
+    }
+
+    .next-button:hover {
+        background-color: #45a049; /* Darker green on hover */
+        transform: scale(1.05); /* Slightly enlarge the button on hover */
+    }
+
+    .next-button:focus {
+        outline: none;
+    </style>
+</head>
+<body>
+
+    <div class="home-container">
+        <img src="C:\Users\ephrem cubita\Downloads\d3ab0c78-b3fc-45cf-944a-50dec7fb9ce1-removebg-preview (1).png" class="image-btn" style="height: 10%; width: 10%;">
+        <h1>Virginia Ramirez Cruz National High School</h1>
+        <h1>Siling Bata, Pandi, Bulacan</h1>
+        <h1>WELCOME TO OUR ONLINE ENROLLMENT FORM</h1>
+        <h2>Click below to get started</h2>
+       <button onclick="openNextTab()" class="next-button">Go to Next Page</button>
+    </div>
+
+
+</body>
+</html>
+
+   
+    <script>
+    function openNextTab() {
+        // Correcting the file path and ensuring it opens in a new tab
+        window.open('cubita3.html');  // This will open dongshtml.html in a new tab
+    }
+</script>
